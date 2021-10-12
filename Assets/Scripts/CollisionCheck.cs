@@ -19,10 +19,12 @@ public class CollisionCheck : MonoBehaviour
 
     public Text Timetext;
 
+    public ParticleSystem CoinPop;
+
     // Start is called before the first frame update
     void Start()
     {
-
+        CoinPop.Stop();
     }
 
     void Update()
@@ -51,6 +53,7 @@ public class CollisionCheck : MonoBehaviour
         {
             scorevalue += 10;
             PointText.text = "Points: " + scorevalue;
+            CoinPop.Play();
             Destroy(other.gameObject);
             Instantiate(Effects, other.transform.position, Quaternion.identity);
         }
