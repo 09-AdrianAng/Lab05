@@ -41,8 +41,9 @@ public class CollisionCheck : MonoBehaviour
         else if (timeleft <= 0)
         {
             SceneManager.LoadScene("GameLose_Scene");
-            //GameObject.Find("FPSController").GetComponent<FirstPersonController>().m_MouseLook.m_cursorIsLocked = false;
         }
+
+        GameObject.Find("FPSController").GetComponent<FirstPersonController>().m_MouseLook.m_cursorIsLocked = false;
     }
     private void OnTriggerEnter(Collider other)
     {
