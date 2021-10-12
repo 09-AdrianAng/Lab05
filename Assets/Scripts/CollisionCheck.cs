@@ -34,12 +34,12 @@ public class CollisionCheck : MonoBehaviour
         {
             if (timeleft <= TimerValue)
             {
-                SceneManager.LoadScene("GameWinScene");
+                SceneManager.LoadScene("GameWin_Scene");
             }
         }
         else if (timeleft <= 0)
         {
-            SceneManager.LoadScene("GameLoseScene");
+            SceneManager.LoadScene("GameLose_Scene");
         }
     }
     private void OnTriggerEnter(Collider other)
@@ -53,7 +53,7 @@ public class CollisionCheck : MonoBehaviour
         }
         if (other.gameObject.tag == "Water")
         {
-            SceneManager.LoadScene("GameLoseScene");
+            SceneManager.LoadScene("GameLose_Scene");
         }
     }
 
