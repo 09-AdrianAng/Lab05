@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityStandardAssets.Characters.FirstPerson;
 
 public class CollisionCheck : MonoBehaviour
 {
@@ -40,6 +41,7 @@ public class CollisionCheck : MonoBehaviour
         else if (timeleft <= 0)
         {
             SceneManager.LoadScene("GameLose_Scene");
+            //GameObject.Find("FPSController").GetComponent<FirstPersonController>().m_MouseLook.m_cursorIsLocked = false;
         }
     }
     private void OnTriggerEnter(Collider other)
@@ -54,6 +56,7 @@ public class CollisionCheck : MonoBehaviour
         if (other.gameObject.tag == "Water")
         {
             SceneManager.LoadScene("GameLose_Scene");
+            GameObject.Find("FPSController").GetComponent<FirstPersonController>().m_MouseLook.m_cursorIsLocked = false;
         }
     }
 
