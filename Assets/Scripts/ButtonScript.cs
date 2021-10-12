@@ -7,6 +7,6 @@ public class ButtonScript : MonoBehaviour
 {
     public void OnRestartClick()
     {
-        SceneManager.LoadScene("GameLose_Scene");
+        SceneManager.LoadScene("GameScene");
     }
 }
