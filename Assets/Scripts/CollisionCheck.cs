@@ -6,12 +6,10 @@ using UnityEngine.UI;
 public class CollisionCheck : MonoBehaviour
 {
     public GameObject scoreText;
-    public int theScore;
+    public static int theScore;
 
-    void OnTriggerEnter(Collider other)
+    void Update()
     {
-        theScore += 10;
         scoreText.GetComponent<Text>().text = "Score: " + theScore;
-        Destroy(gameObject);
     }
 }
